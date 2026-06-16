@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Finance Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1 class="title">Finance Tracker Dashboard</h1>
+
+<!-- NAVIGATION -->
+<div class="navbar">
+  <div class="navbtn" onclick="show('home')">Home</div>
+  <div class="navbtn" onclick="show('stock')">Stock</div>
+  <div class="navbtn" onclick="show('expense')">Expense</div>
+  <div class="navbtn" onclick="show('income')">Income</div>
+  <div class="navbtn" onclick="show('invest')">Investment</div>
+  <div class="navbtn" onclick="show('calendar')">Calendar</div>
+  <div class="navbtn" onclick="show('monthly')">Monthly</div>
+</div>
+
+<!-- HOME -->
+<div id="home" class="page active">
+  <h2>Overview Dashboard</h2>
+  <canvas> id="financeChart"
+    style="max-width:500px; margin:20px auto;
+    display:block;"></canvas>
+</div>
+
+<!-- STOCK -->
+<div id="stock" class="page">
+<h2>Stock Tracker</h2>
+
+<div class="stock-wrap">
+
+<div class="panel">
+<h3>BUY</h3>
+<input id="sname" placeholder="Stock Name">
+<input id="buyprice" placeholder="Buy Price">
+<input id="sqty" placeholder="Quantity">
+<input id="sdate" placeholder="Buy Date">
+</div>
+
+<div class="panel">
+<h3>SELL</h3>
+<input id="sname2" placeholder="Stock Name">
+<input id="sellprice" placeholder="Sell Price">
+<input id="selldate" placeholder="Sell Date">
+<input id="sellqty" placeholder="Qty Sold">
+</div>
+
+</div>
+
+<div class="btn" onclick="addStock()">ADD STOCK</div>
+
+<div id="stockList"></div>
+</div>
+
+<!-- EXPENSE -->
+<div id="expense" class="page">
+<h2>Expense Tracker</h2>
+
+<input id="ename" placeholder="Item">
+<input id="eamt" placeholder="Amount">
+<input id="edate" placeholder="Date">
+<input id="ecat" placeholder="Category">
+
+<div class="btn" onclick="addExpense()">ADD EXPENSE</div>
+<div id="expenseList"></div>
+</div>
+
+<!-- INCOME -->
+<div id="income" class="page">
+<h2>Income Tracker</h2>
+
+<input id="iamt" placeholder="Income">
+<input id="isrc" placeholder="Source">
+<input id="idate" placeholder="Date">
+
+<div class="btn" onclick="addIncome()">ADD INCOME</div>
+<div id="incomeList"></div>
+</div>
+
+<!-- INVESTMENT -->
+<div id="invest" class="page">
+<h2>Investment Tracker</h2>
+
+<input id="iname" placeholder="Investment Name">
+<input id="iamount" placeholder="Amount">
+<input id="idate2" placeholder="Date">
+
+<div class="btn" onclick="addInvest()">ADD INVESTMENT</div>
+
+<div id="investList"></div>
+</div>
+
+<!-- CALENDAR -->
+<div id="calendar" class="page">
+<h2>Calendar</h2>
+<div id="cal"></div>
+</div>
+
+<!-- MONTHLY -->
+<div id="monthly" class="page">
+<h2>Monthly Summary</h2>
+<div id="monthlyBox"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
