@@ -26,6 +26,6 @@ The Personal Finance Tracker is a simple application designed to help users trac
 
 ## 📂 Project Structure
 Personal finance tracker
- index.html
- style.css
- script.js
+- index.html
+- style.css
+- script.js
